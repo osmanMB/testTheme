@@ -1,4 +1,9 @@
 <?php
+function o_theme_support() {
+    add_theme_support('title-tag');
+}
+
+add_action('after_setup_theme', 'o_theme_support');
 
 function o_register_css() {
     $version = wp_get_theme()->get( 'version' );
