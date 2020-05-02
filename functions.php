@@ -10,4 +10,16 @@ function o_register_css() {
 
 add_action('wp_enqueue_scripts', 'o_register_css');
 
+
+function o_register_js() {
+    
+    wp_enqueue_script('o-jquery', "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), '3.4.1', true);
+    wp_enqueue_script('o-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", array('o-jquery'), '4.4.1', true);
+    wp_enqueue_script('o-popper', "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", array(), '1.16.0', true);
+    wp_enqueue_script('o-main', get_template_directory_uri() . "/assets/js/main.js", array('o-bootstrap'), '1.1', true);
+
+}
+
+add_action('wp_enqueue_scripts', 'o_register_js');
+
 ?>
