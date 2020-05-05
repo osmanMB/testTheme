@@ -26,7 +26,13 @@ wp_head();
 			</button>
 
 			<div id="navigation" class="collapse navbar-collapse flex-column" >
-				<img class="mb-3 mx-auto logo" src="wp-content/themes/osman/assets/images/logo.png" alt="logo" >			
+				<?php
+				if (function_exists('the_custom_logo')) {
+					$custom_logo_id = get_theme_mod('custom_logo');
+					$logo = wp_get_attachment_image_src($custom_logo_id);
+				}
+				?>
+				<img class="mb-3 mx-auto logo" src= <?php echo $logo[0] ?> alt="logo" >			
 				
 				<?php
 
