@@ -5,6 +5,18 @@ function o_theme_support() {
 
 add_action('after_setup_theme', 'o_theme_support');
 
+function o_menus() {
+
+    $locations = array (
+        'primary' => 'primary left sidebar',
+        'footer'  => 'footer menu list'
+    );
+
+    register_nav_menus($locations);
+}
+
+add_action('init', 'o_menus');
+
 function o_register_css() {
     $version = wp_get_theme()->get( 'version' );
     wp_enqueue_style('o-style', get_template_directory_uri() . "/style.css", array('o-bootstrap'), $version, 'all');
