@@ -25,7 +25,7 @@ wp_head();
 			<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<div id="navigation" class="collapse navbar-collapse flex-column" >
+			<div id="navigation" class="nav-1 collapse navbar-collapse flex-column" >
 				<?php
 				if (function_exists('the_custom_logo')) {
 					$custom_logo_id = get_theme_mod('custom_logo');
@@ -41,7 +41,7 @@ wp_head();
 						'menu' => 'primary',
 						'container' => '',
 						'theme_location' => 'primary',
-						'items_wrap' => '<ul id="" class="navbar-nav flex-column text-sm-center text-md-left">%3$s</ul>'
+						'items_wrap' => '<ul id="" class="navbar-nav flex-column text-sm-center text-md-right">%3$s</ul>'
 					)
 				);
 

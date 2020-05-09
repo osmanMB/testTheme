@@ -20,10 +20,10 @@ function o_menus() {
 add_action('init', 'o_menus');
 
 function o_register_css() {
-    $version = wp_get_theme()->get( 'version' );
-    wp_enqueue_style('o-style', get_template_directory_uri() . "/style.css", array('o-bootstrap'), $version, 'all');
-    wp_enqueue_style('o-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '4.4.1', 'all');
+    wp_enqueue_style('o-normalize', "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css", array(), '8.0.1', 'all');
     wp_enqueue_style('o-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '5.13.0', 'all');
+    wp_enqueue_style('o-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '4.4.1', 'all');
+    wp_enqueue_style('o-style', get_template_directory_uri() . "/style.css", array('o-bootstrap'), wp_get_theme()->get('Version'), 'all');
 
 }
 

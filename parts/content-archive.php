@@ -10,7 +10,7 @@
                     the_excerpt();
                     ?>
                 </div>
-                <a class="more-link" href="<?php the_permalink(); ?>">Read more &rarr;</a>
+                <a class="more-link btn btn-info read-more" href="<?php the_permalink(); ?>">Read more &rarr;</a>
             </div><!--//media-body-->
         </div><!--//media-->
     </div>
