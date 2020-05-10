@@ -769,4 +769,6 @@ div.comment:first-of-type {
     left: 15px;
     padding: 0.2rem .5rem;
     height: auto;
+    background-color: #a63ca1;
+    border-color: #af3b9b;
 }

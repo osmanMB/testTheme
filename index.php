@@ -13,7 +13,16 @@
 			}
 
 		?>
-        <?php the_posts_pagination(); ?>
+		<?php the_posts_pagination(
+			array(
+				'screen_reader_text' => ' ',
+				'aria_label'         => ''
+			)
+		); ?>
+		
+		<!-- <div class="nav-previous alignleft"><?php //next_posts_link( 'Older posts' ); ?></div>
+		<div class="nav-next alignright"><?php //previous_posts_link( 'Newer posts' ); ?></div> -->
+ 
 	    </article>
 	   
     
