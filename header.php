@@ -41,7 +41,7 @@ wp_head();
 						'menu' => 'primary',
 						'container' => '',
 						'theme_location' => 'primary',
-						'items_wrap' => '<ul id="" class="navbar-nav flex-column text-sm-center text-md-right">%3$s</ul>'
+						'items_wrap' => '<ul id="" class="navbar-nav nav-item flex-column text-sm-center text-md-right">%3$s</ul>'
 					)
 				);
 
