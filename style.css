@@ -166,6 +166,10 @@ h6 {
 .header .nav-item.active a:hover {
     text-decoration: none
 }
+.header li.page_item {
+    list-style: none;
+    font-weight: bold;
+}
 
 .header .page_item a {
     color: rgba(255, 255, 255, 0.8)
@@ -771,4 +775,13 @@ div.comment:first-of-type {
     height: auto;
     background-color: #a63ca1;
     border-color: #af3b9b;
+}
+
+.form-control {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+.o-form .form-check-label {
+    margin-right: 20px;
 }
