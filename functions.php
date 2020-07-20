@@ -20,9 +20,9 @@ function o_menus() {
 add_action('init', 'o_menus');
 
 function o_register_css() {
-    wp_enqueue_style('o-normalize', "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css", array(), '8.0.1', 'all');
-    wp_enqueue_style('o-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '5.13.0', 'all');
-    wp_enqueue_style('o-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '4.4.1', 'all');
+    wp_enqueue_style('o-normalize', get_template_directory_uri() . '/assets/css/normalize.css', array(), '8.0.1', 'all');
+    wp_enqueue_style('o-fontawesome', get_template_directory_uri() . '/assets/css/fontawesome.min.css', array(), '5.13.0', 'all');
+    wp_enqueue_style('o-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '4.4.1', 'all');
     wp_enqueue_style('o-style', get_template_directory_uri() . "/style.css", array('o-bootstrap'), wp_get_theme()->get('Version'), 'all');
 
 }
@@ -32,9 +32,10 @@ add_action('wp_enqueue_scripts', 'o_register_css');
 
 function o_register_js() {
     
-    wp_enqueue_script('o-jquery', "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), '3.4.1', true);
-    wp_enqueue_script('o-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", array('o-jquery'), '4.4.1', true);
-    wp_enqueue_script('o-popper', "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", array(), '1.16.0', true);
+    wp_enqueue_script('o-awesome', get_template_directory_uri() . "/assets/js/fontawesome.min.js", array('o-jquery'), '1.1', true);
+    wp_enqueue_script('o-jquery', get_template_directory_uri() . "/assets/js/jquery-3.5.1.slim.min.js", array(), '3.4.1', true);
+    wp_enqueue_script('o-bootstrap', get_template_directory_uri() . "/assets/js/bootstrap.min.js", array('o-jquery', 'o-awesome'), '4.4.1', true);
+    wp_enqueue_script('o-popper', get_template_directory_uri() . "/assets/js/popper.js", array(), '1.16.0', true);
     wp_enqueue_script('o-main', get_template_directory_uri() . "/assets/js/main.js", array('o-bootstrap'), '1.1', true);
 
 }
