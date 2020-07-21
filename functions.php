@@ -21,7 +21,7 @@ add_action('init', 'o_menus');
 
 function o_register_css() {
     wp_enqueue_style('o-normalize', get_template_directory_uri() . '/assets/css/normalize.css', array(), '8.0.1', 'all');
-    wp_enqueue_style('o-fontawesome', get_template_directory_uri() . '/assets/css/fontawesome.min.css', array(), '5.13.0', 'all');
+    wp_enqueue_style('o-fontawesome', get_template_directory_uri() . '/assets/css/all.min.css', array(), '5.13.0', 'all');
     wp_enqueue_style('o-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '4.4.1', 'all');
     wp_enqueue_style('o-style', get_template_directory_uri() . "/style.css", array('o-bootstrap'), wp_get_theme()->get('Version'), 'all');
 

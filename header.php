@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Blog Site Template">
     <meta name="author" content="https://youtube.com/FollowAndrew">    
-    <link rel="shortcut icon" href="wp-content/themes/osman/assets/images/logo.png"> 
+    <link rel="shortcut icon" href="wp-content/themes/testTheme/assets/images/logo.png"> 
     
 <?php
 wp_head();
@@ -32,7 +32,7 @@ wp_head();
 					$logo = wp_get_attachment_image_src($custom_logo_id);
 				}
 				?>
-				<img class="mb-3 mx-auto logo" src= <?php echo $logo[0] ?> alt="logo" >			
+				<img class="mb-3 mx-auto logo" src= <?php echo get_template_directory_uri() . '/assets/images/logo.png' ?> alt="logo" >			
 				
 				<?php
 
